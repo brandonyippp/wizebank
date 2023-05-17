@@ -63,7 +63,6 @@ askSIN();
 
 /** Valid SIN's
  * - 046454286
- * - 800500200
  */
 
 /** Invalid SIN's
