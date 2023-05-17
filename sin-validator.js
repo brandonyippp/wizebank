@@ -16,10 +16,6 @@ const validateSin = (sin) => {
 
   const digits = Array.from(String(sin), Number);
 
-  if (digits.every((digit) => digit === 0)) {
-    return { output: false, reason: "sum of SIN digits was 0" };
-  }
-
   let sum = 0;
 
   for (let i = 0; i < digits.length; i++) {
@@ -31,6 +27,10 @@ const validateSin = (sin) => {
     } else {
       sum += isSecondDigit ? value : digits[i];
     }
+  }
+
+  if (sum === 0) {
+    return { output: false, reason: "sum of SIN digits was 0" };
   }
 
   return {
