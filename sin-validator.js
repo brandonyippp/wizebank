@@ -32,7 +32,7 @@ const validateSin = (sin) => {
   if (sum === 0) {
     return { output: false, reason: "sum of SIN digits was 0" };
   }
-  console.log(sum);
+
   return {
     output: sum % 10 === 0,
     reason: sum % 10 === 0 ? "success" : "sum of SIN digits undivisible by 10",
