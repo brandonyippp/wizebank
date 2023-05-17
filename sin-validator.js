@@ -10,6 +10,10 @@ const validateSin = (sin) => {
     return { output: false, reason: "invalid length" };
   }
 
+  if (!/^\d+$/.test(sin)) {
+    return { output: false, reason: "non-numeric characters found" };
+  }
+
   const digits = Array.from(String(sin), Number);
 
   if (digits.every((digit) => digit === 0)) {
